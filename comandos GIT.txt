@@ -1,0 +1,43 @@
+En el flujo de trabajo "Local" tenemos:
+
+Area de Trabajo
+Es la "Carpeta" donde estamos trabajando y queremos que sea la raiz de GIT
+
+El comando
+Git init 
+marca el area de trabajo elegida para ese proyecto donde empezamos a colocar los diferenctes archivos.
+git status -s nos muestra el estado de los archivos.
+
+Ahora que ya iniciamos el GIT, podemos decirle que archivos queremos llevar registro, puede ser individual o todos:
+
+git add nombreArchivo  (forma individual)
+git add .              (registra todos los archivos)
+
+Al usar esos comandos le decimos a git que ponga esos archivos en un area temporal, para poder darle diferentes seguimientos o versiones segun querramos para pasarlos al repositorio local junto con un comentario (commit)
+
+Para enviar el archivo al repositorio local usamos:
+
+
+git commit -m "Sin falta agregar un comentario"
+es muy importante hacer un commit con cada modificación o versión que querramos guardar.
+
+Con el comando:
+git log --online nos muestra un listado de todos los commit que hayamos realizado con su respectivo hash para porder revertir o recuperar la version.
+
+Para ello usamos el comando:
+git reset --hard y el hash del commit donde queremos recuperar
+
+PARA SUBIR REPOSITORIO A LA NUBE CON GITHUB
+Luego de haber creado la cuenta github y poder subir nuestro repositorio local a la nube, usamos el comando:
+git remote add origins url (url= es la url creado con github)una sola vez.
+
+Despues que hayamos hecho todos los commit y querramos subir todo al repositorio de la web, usamos el comando:
+git push -u origin master (master es porque es el principal, podemos ademas crear ramas )
+
+si todo resultó bien, al refrescar la pagina web debería estar todo lo que hicimos tambien el la web.
+
+al hacer nuevos cambios en nuestro trabajo, para subirlos los pasos son:
+git add .
+git commit -m "los commit para cada modificacion util"
+git push (ya no hace falta poner la url)
+
